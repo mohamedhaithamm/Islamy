@@ -15,13 +15,14 @@ class ThemingBottomSheet extends StatelessWidget {
           InkWell(
             onTap: (){
               provider.changeTheme(ThemeMode.light);
+
             },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Light',
-                style: Theme.of(context).textTheme.headline5,),
-                Icon(Icons.check,color: Theme.of(context).primaryColor,)
+                style: Theme.of(context).textTheme.labelLarge,),
+                provider.appTheme == ThemeMode.light ? Icon(Icons.check,color: Theme.of(context).primaryColor,) :Container()
               ],
             ),
           ),
@@ -30,8 +31,15 @@ class ThemingBottomSheet extends StatelessWidget {
             onTap: (){
               provider.changeTheme(ThemeMode.dark);
             },
-            child: Text('Dark',
-            style: Theme.of(context).textTheme.headline5,),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Dark',
+                style: Theme.of(context).textTheme.labelLarge,),
+                provider.appTheme == ThemeMode.dark ? Icon(Icons.check,color: Theme.of(context).primaryColor,) :Container()
+
+              ],
+            ),
           ),
         ],
       ),

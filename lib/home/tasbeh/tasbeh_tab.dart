@@ -47,11 +47,8 @@ class _TasbehTabState extends State<TasbehTab> {
           ),
           Text(
             'عدد التسبيحات',
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.w500,
-              color: Colors.black,
-            ),
+              style: Theme.of(context).textTheme.subtitle1,
+
           ),
           Container(
             margin: EdgeInsets.only(top:16),

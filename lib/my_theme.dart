@@ -79,7 +79,7 @@ class MyThemeData {
         fontWeight: FontWeight.bold,
       ),
       bodySmall: TextStyle(
-        color: colorBlack,
+        color: colorWhite,
         fontSize:20,
         fontWeight: FontWeight.bold,
       ),

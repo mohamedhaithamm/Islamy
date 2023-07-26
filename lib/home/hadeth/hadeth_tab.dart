@@ -31,7 +31,7 @@ class _HadethTabState extends State<HadethTab> {
           thickness: 2,
         ),
         Text(AppLocalizations.of(context)!.sura_name,
-            style: Theme.of(context).textTheme.headline2),
+            style: Theme.of(context).textTheme.labelLarge),
         Divider(
           color: MyThemeData.lightPrimary,
           thickness: 2,

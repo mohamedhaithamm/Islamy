@@ -10,7 +10,8 @@ class RadioTab extends StatelessWidget {
         Image.asset('assets/images/radio.png'),
         Text(
           'إذاعة القرآن الكريم',
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+                 style: Theme.of(context).textTheme.subtitle1,
+
         ),
         SizedBox(height: 30,),
         Row(

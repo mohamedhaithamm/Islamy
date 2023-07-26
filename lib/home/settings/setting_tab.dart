@@ -41,7 +41,7 @@ class _SettingsTabState extends State<SettingsTab> {
                   Text(provider.appLanguage == 'en'?
                     AppLocalizations.of(context)!.english
                       :AppLocalizations.of(context)!.arabic,
-                    style: Theme.of(context).textTheme.headline4,
+                    style: Theme.of(context).textTheme.labelLarge,
                   ),
                   Icon(Icons.arrow_drop_down_outlined),
                 ],
@@ -69,7 +69,7 @@ class _SettingsTabState extends State<SettingsTab> {
                   Text(provider.appTheme == ThemeMode.dark?
                     AppLocalizations.of(context)!.dark
                       :AppLocalizations.of(context)!.light,
-                    style: Theme.of(context).textTheme.headline4,
+                    style: Theme.of(context).textTheme.labelLarge,
                   ),
                   Icon(Icons.arrow_drop_down_outlined),
                 ],

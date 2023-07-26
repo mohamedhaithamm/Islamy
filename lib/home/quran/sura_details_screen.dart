@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/home/quran/item_sura_details.dart';
 import 'package:islami_app/my_theme.dart';
+import 'package:islami_app/providers/app_config_provider.dart';
+import 'package:provider/provider.dart';
 
 class SuraDetailsScreen extends StatefulWidget {
   static const String routeName = 'sura_details';
@@ -15,6 +17,8 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AppConfigProvider>(context);
+
     var args = ModalRoute.of(context)?.settings.arguments as SuraDetailsArgs;
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
@@ -23,8 +27,12 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
     }
     loadFile(args.index);
     return Stack(children: [
-      Image.asset(
-        'assets/images/main_background.png',
+      provider.appTheme == ThemeMode.dark
+          ? Image.asset('assets/images/main_background_dark.png',
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.fill)
+          : Image.asset('assets/images/main_background.png',
         width: double.infinity,
         height: double.infinity,
         fit: BoxFit.fill,
@@ -33,7 +41,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
         appBar: AppBar(
           title: Text(
             '${args.name}',
-            style: Theme.of(context).textTheme.headline1,
+            style: Theme.of(context).textTheme.labelLarge,
           ),
         ),
         body: Container(

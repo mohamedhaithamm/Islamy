@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: Colors.transparent,
             title: Text(
               AppLocalizations.of(context)!.app_title,
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context).textTheme.labelLarge,
             ),
           ),
           bottomNavigationBar: Theme(
